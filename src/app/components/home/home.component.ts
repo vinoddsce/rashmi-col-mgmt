@@ -7,14 +7,4 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
 })
 export class HomeComponent {
 
-  // @Input() projectName: string = '';
-  @Input('pName') projectName: string = '';
-  @Output() changeNameEvent = new EventEmitter<string>();
-
-
-  changeName(event: MouseEvent) {
-    console.log("Clicked !!!", event);
-    this.changeNameEvent.emit('College Management');
-  }
-
 }
