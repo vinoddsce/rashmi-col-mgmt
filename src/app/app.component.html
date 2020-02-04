@@ -1,8 +1,11 @@
-<span class="text-color">Welcome !!!!</span>
+<!-- <div>
+  <span class="text-color">Welcome !!!!</span>
+</div> -->
+<!-- <div>
+  Project Name : {{title}}
+</div> -->
+<!-- <div>
+  <button (click)='changeName($event)' (mouseover)='mouseOver($event)'>Change</button>
+</div> -->
 
-
-<p id="author">{{title}}</p>
-
-
-
-<app-home></app-home>
+<app-home [pName]="title" (changeNameEvent)='changeNameApp($event)'></app-home>
