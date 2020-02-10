@@ -1,1 +1,27 @@
-<h3>Student List : </h3>
+<div *ngIf="students.length === 0">
+  <h3> No Students Added !!!</h3>
+  <label>Please add students</label>
+</div>
+
+<h3 *ngIf="students.length > 0">Student List : </h3>
+<table class='table'>
+                  <thead>
+                        <tr>
+                              <th>Title</th>
+                              <th>Director</th>
+                              <th>Cast</th>
+                              
+                          </tr>
+                    </thead>
+                  <tbody>
+                        <tr *ngFor="let std of students;">
+                              <td>{{std.name}}</td>
+                              <td>{{std.course}}</td>
+                              <td>{{std.fees}}</td>
+                          </tr>
+                    </tbody>
+              </table>
+
+<!-- <p *ngFor="let std of students;">
+  <span>{{std.name}}</span>&nbsp;&nbsp;<span>{{std.course}}</span>&nbsp;&nbsp;<span>{{std.fees}}</span>
+</p> -->

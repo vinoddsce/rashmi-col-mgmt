@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-students-container',
   templateUrl: './students-container.component.html',
   styleUrls: ['./students-container.component.css']
 })
-export class StudentsContainerComponent implements OnInit {
+export class StudentsContainerComponent {
 
-  constructor() { }
+  @Input() students: { name: string, course: string, fees: number }[] = [];
 
-  ngOnInit() {
-  }
 
 }

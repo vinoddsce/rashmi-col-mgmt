@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-dept-container',
@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeptContainerComponent {
 
-  newStudent(data): void {
-    console.log("Data: ", data);
+  @Output() newStudentEvent = new EventEmitter<{ name: string, course: string, fees: number }>();
+
+  newStudent(data: { name: string, course: string, fees: number }): void {
+    this.newStudentEvent.emit({ name: data.name, course: data.course, fees: data.fees });
   }
 }

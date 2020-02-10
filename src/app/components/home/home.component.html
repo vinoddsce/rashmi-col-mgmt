@@ -1,6 +1,6 @@
-<app-dept-container></app-dept-container>
+<app-dept-container (newStudentEvent)="newStudent($event)"></app-dept-container>
 
 <hr />
 <hr />
 
-<app-students-container></app-students-container>
+<app-students-container [students]="students"></app-students-container>

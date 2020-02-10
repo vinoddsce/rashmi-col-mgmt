@@ -7,4 +7,10 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
 })
 export class HomeComponent {
 
+  students: { name: string, course: string, fees: number }[] = [];
+
+  newStudent(data: { name: string, course: string, fees: number }): void {
+    this.students.push(data);
+    console.log("students: ", this.students);
+  }
 }
