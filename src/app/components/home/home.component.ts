@@ -1,4 +1,5 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
+import Student from 'src/app/model/student';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +8,13 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
 })
 export class HomeComponent {
 
-  students: { name: string, course: string, fees: number }[] = [];
+  students: Student[] = [];
+
+  num: number = 0;
 
   newStudent(data: { name: string, course: string, fees: number }): void {
-    this.students.push(data);
+    let s = new Student(this.students.length + 1 + "", data.name, data.course, data.fees);
+    this.students.push(s);
     console.log("students: ", this.students);
   }
 }

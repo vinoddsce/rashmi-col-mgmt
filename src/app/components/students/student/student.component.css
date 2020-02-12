@@ -1,0 +1,7 @@
+.below50 {
+  color: red !important;
+}
+
+.above50 {
+  color: green !important;
+}

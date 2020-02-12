@@ -4,24 +4,32 @@
 </div>
 
 <h3 *ngIf="students.length > 0">Student List : </h3>
-<table class='table'>
+<!-- <table class='table'>
                   <thead>
                         <tr>
+      <th>ID</th>
                               <th>Title</th>
                               <th>Director</th>
                               <th>Cast</th>
                               
-                          </tr>
+                          
+    </tr>
                     </thead>
                   <tbody>
                         <tr *ngFor="let std of students;">
+                              <td>{{std._id}}</td>
                               <td>{{std.name}}</td>
                               <td>{{std.course}}</td>
                               <td>{{std.fees}}</td>
                           </tr>
                     </tbody>
-              </table>
+              </table> -->
 
-<!-- <p *ngFor="let std of students;">
-  <span>{{std.name}}</span>&nbsp;&nbsp;<span>{{std.course}}</span>&nbsp;&nbsp;<span>{{std.fees}}</span>
+<!-- <p *ngFor="let std of students; let i = index">
+  <span>ROW:
+    {{i}}</span>&nbsp;&nbsp;<span>{{std._id}}</span>&nbsp;&nbsp;<span>{{std.name}}</span>&nbsp;&nbsp;<span>{{std.course}}</span>&nbsp;&nbsp;<span>{{std.fees}}</span>
 </p> -->
+
+
+<app-student *ngFor="let std of students; let i = index" [s]="std">
+</app-student>

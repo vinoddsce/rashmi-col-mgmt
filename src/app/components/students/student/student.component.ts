@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import Student from 'src/app/model/student';
 
 @Component({
   selector: 'app-student',
   templateUrl: './student.component.html',
   styleUrls: ['./student.component.css']
 })
-export class StudentComponent implements OnInit {
+export class StudentComponent {
 
-  constructor() { }
+  // @Input() _id: string;
+  // @Input() name: string;
+  // @Input() course: string;
+  // @Input() fees: number;
 
-  ngOnInit() {
+  @Input() s: Student;
+
+  getClass() {
+    if (this.s.getFees() <= 50) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
 }

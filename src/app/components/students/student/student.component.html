@@ -1,1 +1,6 @@
-<p>student works!</p>
+<p>
+  <span>STUDENT:{{s._id}}</span>&nbsp;&nbsp;<span>{{s.name}}</span>&nbsp;&nbsp;<span>{{s.course}}</span>&nbsp;&nbsp;
+  <!-- <span style="font-weight: bold; color: green;" [ngClass]="{below50: s.fees <= 50}">{{s.fees}}</span> -->
+  <span [ngStyle]="{'font-size': '26px', 'font-weight': 'bold', 'color': 'green'}"
+    [ngClass]="{below50: s.fees <= 50}">{{s.fees}}</span>
+</p>

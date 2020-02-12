@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import Student from 'src/app/model/student';
 
 @Component({
   selector: 'app-students-container',
@@ -7,7 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class StudentsContainerComponent {
 
-  @Input() students: { name: string, course: string, fees: number }[] = [];
+  @Input() students: Student[] = [];
 
 
 }

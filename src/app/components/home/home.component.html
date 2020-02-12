@@ -1,3 +1,25 @@
+<hr />
+<hr />
+
+Enter Number <input type="text" [(ngModel)]="num" />
+
+<div [ngSwitch]="num">
+  <p *ngSwitchCase="0">
+    You Entered ZERO
+  </p>
+  <p *ngSwitchCase="1">
+    You Entered ONE
+  </p>
+  <p *ngSwitchDefault>
+    You Entered Nothing
+  </p>
+</div>
+
+
+
+<hr />
+<hr />
+
 <app-dept-container (newStudentEvent)="newStudent($event)"></app-dept-container>
 
 <hr />
