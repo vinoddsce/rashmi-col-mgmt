@@ -16,10 +16,17 @@
 
 <hr />
 
-<app-dept-container (newStudentEvent)="newStudent($event)"></app-dept-container>
+<span style="margin-top: 250px;">
+  <button style="color: white; background-color: darkmagenta;" type="button"
+    (click)="onShowDeptClicked($event)">Department</button>
+  <button style="color: white; background-color:dodgerblue;" type="button"
+    (click)="onShowStudentListClicked($event)">StudentList</button>
+</span>
+
+<app-dept-container *ngIf="showDepartment" (newStudentEvent)="newStudent($event)"></app-dept-container>
 
 <hr />
 
-<app-students-container [students]="students"></app-students-container>
+<app-students-container *ngIf="!showDepartment" [students]="students"></app-students-container>
 
-<hr />
+<span style="margin-top: 250px;"></span>
