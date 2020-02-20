@@ -23,7 +23,9 @@
     (click)="onShowStudentListClicked($event)">StudentList</button>
 </span>
 
-<app-dept-container *ngIf="showDepartment" (newStudentEvent)="newStudent($event)"></app-dept-container>
+<app-dept-container *ngIf="showDepartment" (newStudentEvent)="newStudent($event)">
+
+</app-dept-container>
 
 <hr />
 
