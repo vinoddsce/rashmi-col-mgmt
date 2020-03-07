@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
+import { AlertComponent } from './components/alert/alert.component';
 
 
 interface Item {
@@ -12,8 +13,23 @@ interface Item {
   // template: `<p>This is from Inline</p>`,
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  showMsg: boolean = true;
-  items: { id: number, name: string }[] = [{ id: 1, name: 'Item-1' }, { id: 2, name: 'Item-2' }, { id: 3, name: 'Item-3' }];
+export class AppComponent implements AfterViewInit {
 
+
+  @ViewChildren(AlertComponent)
+  alerts: QueryList<AlertComponent>;
+
+  showMsg: boolean = true;
+
+  items: { id: number, name: string }[] =
+    [{ id: 0, name: 'Item-1' }, { id: 2, name: 'Item-2' }, { id: 3, name: 'Item-3' }];
+
+
+
+  ngAfterViewInit() {
+    this.alerts.forEach(alertInstance => {
+      alertInstance.type = "Modified";
+      console.log(alertInstance);
+    });
+  }
 }

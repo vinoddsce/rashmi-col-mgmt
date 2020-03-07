@@ -1,9 +1,41 @@
-<!-- <app-header></app-header>
+<ng-template #companyLogoTemplate>
+  <p>ABC Company Pvt. Ltd.</p>
+</ng-template>
+
+<alert></alert>
+<alert type="Danger"></alert>
+<alert type="Info"></alert>
+
+<app-header [headerLogo]="customLogo">
+  <p>This Is Admin Portal</p>
+  <!-- <ng-container *ngTemplateOutlet="companyLogoTemplate"></ng-container> -->
+  <h1>Header</h1>
+</app-header>
+
 <hr />
 <app-home></app-home>
 <hr />
-<app-footer></app-footer> -->
+<app-footer></app-footer>
+<!-- <ng-container *ngTemplateOutlet="companyLogoTemplate"></ng-container> -->
 
+<!--
+<p *ngFor="let obj of alerts">
+  obj.first
+</p>
+
+Alerts: {{alerts | json }} -->
+
+<ng-template #customLogo>
+  <p>ABC Company Pvt. Ltd.</p>
+</ng-template>
+
+
+
+
+
+
+<!-- ############################# -->
+<!-- Demonstrate ng-template -->
 
 <!-- <ng-template [ngIf]="showMsg">
 </ng-template> -->
@@ -11,8 +43,16 @@
 
 <!-- <ng-template *ngIf="showMsg">Inside Ng Template</ng-template> -->
 
-<ng-template [ngIf]="showMsg">Inside Ng Template</ng-template>
+<!-- <ng-template [ngIf]="showMsg">Inside Ng Template</ng-template> -->
 
 
 <!-- <ng-template *ngIf="showMsg then goHome">Inside Ng Template</ng-template>
 <ng-template #goHome>Home </ng-template> -->
+
+
+<!-- ############################# -->
+<!-- Demonstrate ng-container -->
+
+<!-- <ng-container *ngFor="let item of items">
+  <div *ngIf="item.id">{{item.name}}</div>
+</ng-container> -->

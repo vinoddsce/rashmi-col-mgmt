@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  @Input() headerLogo: TemplateRef<any>;
+
   constructor() { }
 
   ngOnInit() {
+    console.log("TemplateRef: ", this.headerLogo);
   }
 
 }

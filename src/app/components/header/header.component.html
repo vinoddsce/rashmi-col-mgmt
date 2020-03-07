@@ -1,1 +1,11 @@
-<h1>Header</h1>
+<ng-content></ng-content>
+<ng-content select="h1"></ng-content>
+
+<ng-container *ngTemplateOutlet="headerLogo ? headerLogo : defaultLogo"></ng-container>
+
+<!-- <ng-content></ng-content> -->
+
+
+<ng-template #defaultLogo>
+  <p>It's Default Logo Pvt. Ltd. </p>
+</ng-template>

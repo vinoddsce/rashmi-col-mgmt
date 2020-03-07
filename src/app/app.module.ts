@@ -14,6 +14,7 @@ import { StudentComponent } from './components/students/student/student.componen
 import { AddFormComponent } from './components/department/add-form/add-form.component';
 import { DeptContainerComponent } from './components/department/dept-container/dept-container.component';
 import { StudentsContainerComponent } from './components/students/students-container/students-container.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { StudentsContainerComponent } from './components/students/students-conta
     StudentComponent,
     AddFormComponent,
     DeptContainerComponent,
-    StudentsContainerComponent
+    StudentsContainerComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
